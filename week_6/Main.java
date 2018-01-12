@@ -1,19 +1,18 @@
 public class Main {
     
     public static void main(String[] args) {
-        int[] arrayForTesting = {1, 5, 8, 9, 10};
+        int[] arrayTest = {1, 2, 3, 4, 5};
         
-        printElegantly(arrayForTesting);
+        System.out.println(sum(arrayTest));
     }
     
-    public static void printElegantly(int[] arrayFromUser) {
+    public static int sum(int[] arrayFromUser) {
+        int sum = 0;
+        
         for (int count = 0; count < arrayFromUser.length; count++) {
-            
-            if (count != arrayFromUser.length - 1) {
-                System.out.print(arrayFromUser[count] + ", ");
-            } else {
-                System.out.print(arrayFromUser[count]);
-            }
+            sum += arrayFromUser[count];
         }
+        
+        return sum;
     }
 }
